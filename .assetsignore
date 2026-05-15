@@ -1,0 +1,31 @@
+# Tell Cloudflare Pages / Wrangler what NOT to upload as static assets.
+
+# Git internals — packs can exceed Cloudflare's 25 MiB per-file limit
+.git
+.gitignore
+.gitattributes
+
+# Node / build artifacts
+node_modules
+.wrangler
+dist
+.cache
+
+# OS junk
+.DS_Store
+Thumbs.db
+*.log
+
+# Local dev / tooling that should never ship
+.env
+.env.*
+*.md
+supabase_schema.sql
+process_photos.py
+process_smoothies.py
+
+# Storefront-only files (irrelevant on the brand-site project)
+admin.html
+dash.html
+robots.txt
+_redirects
